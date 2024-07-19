@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Pixeland';
+  src: url('../fonts/Pixeland.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #000;
+  color: #0ff;
+  font-family: 'Pixeland', 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.teletext-container {
+  width: 80vmin; /* Use viewport minimum unit to maintain square shape */
+  height: 80vmin;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: #000;
+  color: #0ff;
+  padding: 2vmin; /* Use vmin to make padding responsive */
+  border: 1vmin solid #00f;
+  box-sizing: border-box;
+  font-family: 'Pixeland', 'Courier New', Courier, monospace;
+  line-height: 1.4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.teletext-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00f;
+  padding: 1vmin;
+  font-size: 4vmin;
+  font-family: 'Pixeland', sans-serif;
+  color: #fff;
+  border-bottom: 0.5vmin solid #f00;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.rte {
+  color: #f00;
+  margin-right: 1vmin;
+}
+
+.aertel {
+  color: #0ff;
+}
+
+.teletext-body {
+  background-color: #000;
+  padding: 2vmin;
+  border: 1vmin solid #00f;
+  box-sizing: border-box;
+  text-align: left;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.section {
+  margin: 2vmin 0;
+  padding: 1vmin;
+}
+
+.title {
+  color: #f00;
+  font-size: 3vmin;
+  border-bottom: 0.5vmin solid #f00;
+  padding-bottom: 1vmin;
+}
+
+.header-right {
+  font-size: 2vmin;
+  color: #0ff;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.headline {
+  color: #fff;
+  background-color: #00f;
+  padding: 1vmin 0;
+  text-align: center;
+  border-top: 0.5vmin solid #f00;
+  border-bottom: 0.5vmin solid #f00;
+}
+
+.subtitle {
+  color: #0ff;
+  background-color: #00f;
+  padding: 1vmin 0;
+  text-align: center;
+  border-top: 0.5vmin solid #f00;
+  border-bottom: 0.5vmin solid #f00;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 0.5vmin solid #00f;
+  border-bottom: 0.5vmin solid #00f;
+  padding: 2vmin 0;
+}
+
+.links div {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  color: #f00;
+  font-size: 2vmin;
+}
+
+.links span {
+  color: #0ff;
+}
+
+.info {
+  color: #f00;
+  text-align: center;
+  border-top: 0.5vmin solid #00f;
+  padding-top: 2vmin;
+}
+
+.teletext-footer {
+  background-color: #00f;
+  padding: 1vmin;
+  border-top: 0.5vmin solid #f00;
+  font-size: 2vmin;
+  text-align: center;
+}
+
+.footer-datetime {
+  color: #0ff;
+}

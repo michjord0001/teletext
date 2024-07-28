@@ -27,13 +27,13 @@ const Home = () => {
   return (
     <div className="teletext-container">
       <header className="teletext-header">
-        <span className="rte">MICHJORD0001</span><span className="aertel">.XYZ</span>
+        <span className="aertel">MICHJORD0001</span>
       </header>
       <div className="teletext-body">
         <div className="header-right">
           {formatDateTime(currentTime)}
         </div>
-        <div className="section title">MJ Index</div>
+        <div className="section title">Index</div>
         {/*<div className="section headline"></div>*/}
         <div className="section subtitle">Free Open Source Software</div>
         <div className="section links">
@@ -46,7 +46,7 @@ const Home = () => {
           <div>Competitions <span>620</span></div>
           <div>Classifieds <span>600</span></div>
         </div>
-        <div className="section info">AERTEL FULL CONTENTS <span>101</span></div>
+        <div className="section info">AERTEL<span>101</span></div>
       </div>
     </div>
   );

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import handcodedImg from '../images/marquee/handcoded.png';
+import transrights1Img from '../images/marquee/transrights1.gif';
+import lgbtfriendlyImg from '../images/marquee/lgbtfriendly.gif';
+import freePalestineImg from '../images/marquee/FreePalestine.gif';
+import antifaImg from '../images/marquee/Antifa.png';
+import blackLivesMatterImg from '../images/marquee/blacklivesmatter.gif';
 
 const Home = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -27,27 +33,88 @@ const Home = () => {
   return (
     <div className="teletext-container">
       <header className="teletext-header">
-        <span className="aertel">MICHJORD0001</span>
+        <span className="rte">MICHJORD0001</span>
       </header>
-      <div className="teletext-body">
+
+      <main className="teletext-body">
+
         <div className="header-right">
           {formatDateTime(currentTime)}
         </div>
-        <div className="section title">Index</div>
-        {/*<div className="section headline"></div>*/}
-        <div className="section subtitle">Free Open Source Software</div>
-        <div className="section links">
-          <div>News <span>102</span></div>
-          <div>Sport <span>200</span></div>
-          <div>Entertainment <span>300</span></div>
-          <div>Business <span>130</span></div>
-          <div>TV INDEX <span>170</span></div>
-          <div>Travel <span>500</span></div>
-          <div>Competitions <span>620</span></div>
-          <div>Classifieds <span>600</span></div>
+
+        <section className="section title">Contact</section>
+
+        <section className="section links">
+          <div>
+            <a href="mailto:mj@michjord0001.digital">Email</a>
+            <span className="number"><a href="mailto:mj@michjord0001.digital">102</a></span>
+          </div>
+          <div>
+            <a href="https://github.com/michjord0001">GitHub</a>
+            <span className="number"><a href="https://github.com/michjord0001">200</a></span>
+          </div>
+          <div>
+            <a href="https://mastodon.green/@michjord0001">Mastodon</a>
+            <span className="number"><a href="https://mastodon.green/@michjord0001">300</a></span>
+          </div>
+          <div>
+            <a href="https://pixelfed.social/michjord0001">PixelFed</a>
+            <span className="number"><a href="https://pixelfed.social/michjord0001">130</a></span>
+          </div>
+          <div>
+            <a href="http://linkedin.com/in/michjord0001">LinkedIn</a>
+            <span className="number"><a href="http://linkedin.com/in/michjord0001">170</a></span>
+          </div>
+          <div>
+            <a href="http://facebook.com/michjord0001">Facebook</a>
+            <span className="number"><a href="http://facebook.com/michjord0001">500</a></span>
+          </div>
+          <div>
+            <a href="http://instagram.com/michjord0001">Instagram</a>
+            <span className="number"><a href="http://instagram.com/michjord0001">620</a></span>
+          </div>
+          <div>
+            <a href="https://x.com/michjord0001">Twitte𝕏</a>
+            <span className="number"><a href="https://x.com/michjord0001">600</a></span>
+          </div>
+          <div>
+            <a href="https://open.spotify.com/user/1156208606">Spotify</a>
+            <span className="number"><a href="https://open.spotify.com/user/1156208606">600</a></span>
+          </div>
+          <div>
+            <a href="https://t.me/michjord0001">Telegram</a>
+            <span className="number"><a href="https://t.me/michjord0001">600</a></span>
+          </div>
+        </section>
+
+        <div className="bottom-container">
+          <div className="bottom-item">
+            <img src={handcodedImg} alt="Handcoded" />
+          </div>
+          <div className="bottom-item">
+            <img src={transrights1Img} alt="Trans Rights" />
+          </div>
+          <div className="bottom-item">
+            <img src={lgbtfriendlyImg} alt="LGBT Friendly" />
+          </div>
+          <div className="bottom-item">
+            <a href="https://bdsmovement.net/what-is-bds">
+              <img src={freePalestineImg} alt="Free Palestine" />
+            </a>
+          </div>
+          <div className="bottom-item">
+            <img src={antifaImg} alt="Antifa" width="80" />
+          </div>
+          <div className="bottom-item">
+            <img src={blackLivesMatterImg} alt="Black Lives Matter" />
+          </div>
         </div>
-        <div className="section info">AERTEL<span>101</span></div>
-      </div>
+
+        </main>
+
+      <footer className="teletext-footer">
+        Free Open Source Software
+      </footer>
     </div>
   );
 };

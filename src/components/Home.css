@@ -1,50 +1,69 @@
 @font-face {
+  font-family: 'Teletext';
+  src: url('../fonts/teletext.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Pixeland';
   src: url('../fonts/Pixeland.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+:root {
+  --black: #000000ff;
+  --green: #00ff00ff;
+  --zaffre: #1020b6ff;
+  --aureolin: #eeee06ff;
+  --cyan-rgb: #00ffffff;
+}
+
 body {
-  background-color: #000;
-  color: #0ff;
-  font-family: 'Pixeland', 'Courier New', Courier, monospace;
+  background-color: var(--black);
+  color: var(--cyan-rgb);
+  font-family: 'Teletext', 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
 }
 
 .teletext-container {
-  width: 80vmin; /* Use viewport minimum unit to maintain square shape */
+  width: 80vmin;
   height: 80vmin;
   max-width: 90vw;
   max-height: 90vh;
-  background-color: #000;
-  color: #0ff;
-  padding: 2vmin; /* Use vmin to make padding responsive */
-  border: 1vmin solid #00f;
+  background-color: var(--black);
+  color: var(--cyan-rgb);
+  padding: 2vmin;
+  border: 1vmin solid var(--zaffre);
   box-sizing: border-box;
-  font-family: 'Pixeland', 'Courier New', Courier, monospace;
+  font-family: 'Teletext', 'Courier New', Courier, monospace;
   line-height: 1.4;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  position: relative;
 }
 
 .teletext-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00f;
+  background-color: var(--zaffre);
   padding: 1vmin;
   font-size: 4vmin;
-  font-family: 'Pixeland', sans-serif;
-  color: #fff;
-  border-bottom: 0.5vmin solid #f00;
+  font-family: 'Teletext', sans-serif;
+  color: var(--black);
+  border-bottom: 0.5vmin solid var(--green);
+  text-shadow: 1px 1px var(--black);
 }
 
 .header-left {
@@ -53,97 +72,179 @@ body {
 }
 
 .rte {
-  color: #f00;
+  color: var(--green);
   margin-right: 1vmin;
+  font-family: 'Pixeland', sans-serif;
+  font-size: 7vmin;
 }
 
-.aertel {
-  color: #0ff;
+.header-right {
+  font-size: 2vmin;
+  color: var(--cyan-rgb);
+  text-align: right;
+  white-space: nowrap;
+  position: absolute;
+  right: 1vmin;
+  margin-top: 1vmin;  /* Added vertical space */
 }
 
 .teletext-body {
-  background-color: #000;
+  background-color: var(--black);
   padding: 2vmin;
-  border: 1vmin solid #00f;
+  border: 1vmin solid var(--zaffre);
   box-sizing: border-box;
   text-align: left;
   flex: 1;
   overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ensure children stack vertically */
+  align-items: left; 
+  margin-top: 2vmin;  /* Adjust this value if needed */
 }
 
 .section {
   margin: 2vmin 0;
   padding: 1vmin;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 1vmin;
+  border: 0.2vmin solid var(--zaffre);
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px var(--black);
+  border-color: var(--zaffre);
+}
+
+.section:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: var(--aureolin);
+  box-shadow: 0 0 10px var(--aureolin);
 }
 
 .title {
-  color: #f00;
+  color: var(--green);
   font-size: 3vmin;
-  border-bottom: 0.5vmin solid #f00;
   padding-bottom: 1vmin;
+  margin-top: 10vmin;  /* Lower the title */
+  text-shadow: 1px 1px var(--black);
+  border-color: var(--green); /* Ensure border color consistency */
 }
 
-.header-right {
-  font-size: 2vmin;
-  color: #0ff;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.headline {
-  color: #fff;
-  background-color: #00f;
+/* .headline, .subtitle {
+  color: var(--black);
+  background-color: var(--zaffre);
   padding: 1vmin 0;
   text-align: center;
-  border-top: 0.5vmin solid #f00;
-  border-bottom: 0.5vmin solid #f00;
-}
-
-.subtitle {
-  color: #0ff;
-  background-color: #00f;
-  padding: 1vmin 0;
-  text-align: center;
-  border-top: 0.5vmin solid #f00;
-  border-bottom: 0.5vmin solid #f00;
-}
+  border-top: 0.5vmin solid var(--aureolin);
+  border-bottom: 0.5vmin solid var(--aureolin);
+  animation: blink 1s infinite;
+  text-shadow: 1px 1px var(--black);
+} */
 
 .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-top: 0.5vmin solid #00f;
-  border-bottom: 0.5vmin solid #00f;
   padding: 2vmin 0;
+  border: none; /* Remove border */
+  margin-top: 0vmin;
 }
 
 .links div {
-  width: 48%;
+  width: 45%;
   display: flex;
   justify-content: space-between;
-  color: #f00;
+  align-items: center; /* Align items vertically center */
+  color: var(--green); /* Text color for links */
   font-size: 2vmin;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px var(--black);
 }
 
-.links span {
-  color: #0ff;
+.links div:hover {
+  color: var(--aureolin); /* Hover color for links */
+}
+
+.links a {
+  color: var(--cyan-rgb); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.links a:hover {
+  color: var(--aureolin); /* Color change on hover */
+}
+
+.number {
+  margin-left: auto; /* Push the number to the right */
+  color: var(--aureolin); /* Yellow color for numbers */
+}
+
+.number a {
+  text-decoration: none; /* Remove underline from numbers */
+  color: var(--aureolin); /* Yellow color for numbers */
+}
+
+.number a:hover {
+  color: var(--aureolin); /* Color change on hover */
+  text-decoration: underline; /* Optional: underline on hover */
 }
 
 .info {
-  color: #f00;
+  color: var(--aureolin);
   text-align: center;
-  border-top: 0.5vmin solid #00f;
+  border-top: 0.5vmin solid var(--zaffre);
   padding-top: 2vmin;
+  text-shadow: 1px 1px var(--black);
 }
+
+@keyframes blink {
+  50% {
+      opacity: 0.5;
+  }
+}
+
+.parent-container {
+  position: relative; /* Ensure the parent container is positioned */
+  height: 100%; /* Make sure the parent container takes up the full height */
+}
+
+.bottom-container {
+  display: flex; /* Enable flexbox layout */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically within the container */
+  gap: 1vmin; /* Space between items */
+  width: 100%; /* Full width of the parent container */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  position: absolute; /* Position absolutely within the parent container */
+  bottom: 0; /* Align to the bottom of the parent container */
+  left: 0; /* Align to the left of the parent container */
+  right: 0; /* Align to the right of the parent container */
+  overflow: hidden; /* Prevent scrolling */
+  padding: 1vmin; /* Optional: Add padding for better spacing */
+}
+
+.bottom-item {
+  flex: 1 1 auto; /* Allow items to grow and shrink automatically */
+  max-width: 100px; /* Set a maximum width for each item */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.bottom-item img {
+  width: 100%; /* Ensure images fill their container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+
+
+
 
 .teletext-footer {
-  background-color: #00f;
+  background-color: var(--zaffre);
   padding: 1vmin;
-  border-top: 0.5vmin solid #f00;
+  border-top: 0.5vmin solid var(--green);
   font-size: 2vmin;
   text-align: center;
-}
-
-.footer-datetime {
-  color: #0ff;
+  color: var(--cyan-rgb);
+  text-shadow: 1px 1px var(--black);
 }

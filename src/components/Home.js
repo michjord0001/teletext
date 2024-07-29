@@ -47,39 +47,39 @@ const Home = () => {
         <section className="section links">
           <div>
             <a href="mailto:mj@michjord0001.digital">Email</a>
-            <span className="number"><a href="mailto:mj@michjord0001.digital">102</a></span>
+            <span className="number"><a href="mailto:mj@michjord0001.digital">101</a></span>
           </div>
           <div>
             <a href="https://github.com/michjord0001">GitHub</a>
-            <span className="number"><a href="https://github.com/michjord0001">200</a></span>
+            <span className="number"><a href="https://github.com/michjord0001">110</a></span>
           </div>
           <div>
             <a href="https://mastodon.green/@michjord0001">Mastodon</a>
-            <span className="number"><a href="https://mastodon.green/@michjord0001">300</a></span>
+            <span className="number"><a href="https://mastodon.green/@michjord0001">200</a></span>
           </div>
           <div>
             <a href="https://pixelfed.social/michjord0001">PixelFed</a>
-            <span className="number"><a href="https://pixelfed.social/michjord0001">130</a></span>
+            <span className="number"><a href="https://pixelfed.social/michjord0001">250</a></span>
           </div>
           <div>
             <a href="http://linkedin.com/in/michjord0001">LinkedIn</a>
-            <span className="number"><a href="http://linkedin.com/in/michjord0001">170</a></span>
+            <span className="number"><a href="http://linkedin.com/in/michjord0001">350</a></span>
           </div>
           <div>
             <a href="https://x.com/michjord0001">Twitte𝕏</a>
-            <span className="number"><a href="https://x.com/michjord0001">600</a></span>
+            <span className="number"><a href="https://x.com/michjord0001">375</a></span>
           </div>
           <div>
             <a href="http://facebook.com/michjord0001">Facebook</a>
-            <span className="number"><a href="http://facebook.com/michjord0001">500</a></span>
+            <span className="number"><a href="http://facebook.com/michjord0001">400</a></span>
           </div>
           <div>
             <a href="http://instagram.com/michjord0001">Instagram</a>
-            <span className="number"><a href="http://instagram.com/michjord0001">620</a></span>
+            <span className="number"><a href="http://instagram.com/michjord0001">420</a></span>
           </div>
           <div>
             <a href="https://t.me/michjord0001">Telegram</a>
-            <span className="number"><a href="https://t.me/michjord0001">600</a></span>
+            <span className="number"><a href="https://t.me/michjord0001">500</a></span>
           </div>
           <div>
             <a href="https://open.spotify.com/user/1156208606">Spotify</a>
@@ -92,10 +92,10 @@ const Home = () => {
             <img src={handcodedImg} alt="Handcoded" />
           </div>
           <div className="bottom-item">
-            <img src={transrights1Img} alt="Trans Rights" />
+            <img src={blackLivesMatterImg} alt="Black Lives Matter" />
           </div>
           <div className="bottom-item">
-            <img src={lgbtfriendlyImg} alt="LGBT Friendly" />
+            <img src={transrights1Img} alt="Trans Rights" />
           </div>
           <div className="bottom-item">
             <a href="https://bdsmovement.net/what-is-bds">
@@ -106,7 +106,7 @@ const Home = () => {
             <img src={antifaImg} alt="Antifa" width="80" />
           </div>
           <div className="bottom-item">
-            <img src={blackLivesMatterImg} alt="Black Lives Matter" />
+            <img src={lgbtfriendlyImg} alt="LGBT Friendly" />
           </div>
         </div>
 

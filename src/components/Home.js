@@ -66,6 +66,10 @@ const Home = () => {
             <span className="number"><a href="http://linkedin.com/in/michjord0001">170</a></span>
           </div>
           <div>
+            <a href="https://x.com/michjord0001">Twitte𝕏</a>
+            <span className="number"><a href="https://x.com/michjord0001">600</a></span>
+          </div>
+          <div>
             <a href="http://facebook.com/michjord0001">Facebook</a>
             <span className="number"><a href="http://facebook.com/michjord0001">500</a></span>
           </div>
@@ -74,16 +78,12 @@ const Home = () => {
             <span className="number"><a href="http://instagram.com/michjord0001">620</a></span>
           </div>
           <div>
-            <a href="https://x.com/michjord0001">Twitte𝕏</a>
-            <span className="number"><a href="https://x.com/michjord0001">600</a></span>
+            <a href="https://t.me/michjord0001">Telegram</a>
+            <span className="number"><a href="https://t.me/michjord0001">600</a></span>
           </div>
           <div>
             <a href="https://open.spotify.com/user/1156208606">Spotify</a>
             <span className="number"><a href="https://open.spotify.com/user/1156208606">600</a></span>
-          </div>
-          <div>
-            <a href="https://t.me/michjord0001">Telegram</a>
-            <span className="number"><a href="https://t.me/michjord0001">600</a></span>
           </div>
         </section>
 

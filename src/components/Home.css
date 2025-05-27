@@ -125,7 +125,7 @@ body {
   color: var(--green);
   font-size: 3vmin;
   padding-bottom: 1vmin;
-  margin-top: 10vmin;  /* Lower the title */
+  margin-top: 5vmin;  /* Lower the title */
   text-shadow: 1px 1px var(--black);
   border-color: var(--green); /* Ensure border color consistency */
 }
@@ -243,4 +243,24 @@ body {
   text-align: center;
   color: var(--cyan-rgb);
   text-shadow: 1px 1px var(--black);
+}
+
+.connect-wallet-button {
+  font-family: monospace;
+  font-size: 16px;
+  background-color: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: inset 0 0 0 1px #00ff00;
+}
+
+.connect-wallet-button:hover {
+  background-color: #00ff00;
+  color: black;
 }
